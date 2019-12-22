@@ -14,7 +14,7 @@ steps:
   displayName: 'PowerShell Script'
   inputs:
     targetType: filePath
-    filePath: ./ApplyVersion.ps1
+    filePath: ./ApplyVersionNumber.ps1
 - task: CopyFiles@2
   inputs:
     contents: |
