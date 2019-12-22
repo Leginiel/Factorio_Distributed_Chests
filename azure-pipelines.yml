@@ -44,11 +44,12 @@ steps:
 
 - task: GitHubRelease@0
   inputs:
-    gitHubConnection: github.com
+    gitHubConnection: 'github.com'
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'auto'
+    tagSource: 'manual'
+    tag: 'Distributed-Chests_$(Env:BUILD_BUILDNUMBER)'
     title: 'Distributed'
     releaseNotesFile: '$(Build.ArtifactStagingDirectory)/changelog.txt'
     assets: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip'
