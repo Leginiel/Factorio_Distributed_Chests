@@ -56,9 +56,9 @@ steps:
     target: '$(Build.SourceVersion)'
     tagSource: 'manual'
     tag: 'v$(Version.MajorMinor).$(Version.Patch)'
-    title: 'Distributed'
+    title: 'Distributed Chests $(Version.MajorMinor).$(Version.Patch)'
     releaseNotesFile: '$(Build.ArtifactStagingDirectory)/changelog.txt'
     assets: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Version.MajorMinor).$(Version.Patch).zip'
-    isPreRelease: true
+    isDraft: true
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
