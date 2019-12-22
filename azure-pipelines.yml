@@ -19,6 +19,7 @@ steps:
   inputs:
     contents: |
       !(*.ps1)
+      !(*.yml)
     targetFolder:
       Distributed_Chests
     cleanTargetFolder: true
