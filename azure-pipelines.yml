@@ -42,7 +42,7 @@ steps:
     replaceExistingArchive: true 
 - task: GitHubRelease@0
   inputs:
-    gitHubConnection: Leginiel
+    gitHubConnection: github.com
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
