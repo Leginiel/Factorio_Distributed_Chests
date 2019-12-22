@@ -1,0 +1,13 @@
+{
+  "name": "Distributed_Chests",
+  "version": "0.1.",
+  "title": "Distributed Chests",
+  "author": "Leginiel",
+  "contact": "",
+  "homepage": "https://github.com/Leginiel/Distributed_Chests",
+  "factorio_version": "0.17",
+  "description": "Provides chests that will distribute their contents when they are next to each other.",
+  "dependencies": [
+    "base >= 0.17.10"
+  ]
+}
