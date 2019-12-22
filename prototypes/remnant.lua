@@ -3,7 +3,7 @@ data:extend(
     {
       type = "corpse",
       name = "distributed-chest-remnants",
-      icon = "__Distributed_Chests__/graphics/distributed-chest.png",
+      icon = "__Distributed-Chests__/graphics/distributed-chest.png",
       icon_size = 32,
       flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
       selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -17,7 +17,7 @@ data:extend(
       remove_on_tile_placement = false,
       animation =
       {
-        filename = "__Distributed_Chests__/graphics/remnants/distributed-chest-remnants.png",
+        filename = "__Distributed-Chests__/graphics/remnants/distributed-chest-remnants.png",
         line_length = 1,
         width = 76,
         height = 44,
@@ -26,7 +26,7 @@ data:extend(
         shift = util.by_pixel(15, -1),
         hr_version =
         {
-          filename = "__Distributed_Chests__/graphics/remnants/hr-distributed-chest-remnants.png",
+          filename = "__Distributed-Chests__/graphics/remnants/hr-distributed-chest-remnants.png",
           line_length = 1,
           width = 150,
           height = 88,

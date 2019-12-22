@@ -4,7 +4,7 @@ data:extend(
 			type = "technology",
 			name = "distributed-chest",
 			icon_size = 128,
-			icon = "__Distributed_Chests__/graphics/distributed-chest-technology.png",
+			icon = "__Distributed-Chests__/graphics/distributed-chest-technology.png",
 			effects =
 			{
 			  {

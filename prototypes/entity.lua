@@ -6,7 +6,7 @@ distributedChest.order = "d-i-s"
 distributedChest.minable = {mining_time = 0.2, result = "distributed-chest"}
 distributedChest.icons= {
    {
-      icon="__Distributed_Chests__/graphics/distributed-chest.png"
+      icon="__Distributed-Chests__/graphics/distributed-chest.png"
    },
 }
 distributedChest.picture =
@@ -14,14 +14,14 @@ distributedChest.picture =
       layers =
       {
         {
-          filename = "__Distributed_Chests__/graphics/distributed-chest.png",
+          filename = "__Distributed-Chests__/graphics/distributed-chest.png",
           priority = "extra-high",
           width = 32,
           height = 40,
           shift = util.by_pixel(0, -0.5),
           hr_version =
           {
-            filename = "__Distributed_Chests__/graphics/hr-distributed-chest.png",
+            filename = "__Distributed-Chests__/graphics/hr-distributed-chest.png",
             priority = "extra-high",
             width = 64,
             height = 80,
@@ -30,7 +30,7 @@ distributedChest.picture =
           }
         },
         {
-          filename = "__Distributed_Chests__/graphics/distributed-chest-shadow.png",
+          filename = "__Distributed-Chests__/graphics/distributed-chest-shadow.png",
           priority = "extra-high",
           width = 56,
           height = 22,
@@ -38,7 +38,7 @@ distributedChest.picture =
           draw_as_shadow = true,
           hr_version =
           {
-            filename = "__Distributed_Chests__/graphics/hr-distributed-chest-shadow.png",
+            filename = "__Distributed-Chests__/graphics/hr-distributed-chest-shadow.png",
             priority = "extra-high",
             width = 110,
             height = 46,
