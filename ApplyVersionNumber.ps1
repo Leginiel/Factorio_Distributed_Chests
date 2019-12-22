@@ -77,8 +77,7 @@ if($files)
 		$filecontent = Get-Content($file)
 		attrib $file -r
     $regex = [Regex]$VersionRegex
-    $regex.replace($filecontent, $NewVersion, 1) | Out-File $file
-#		$filecontent -replace $VersionRegex, $NewVersion, 1 | Out-File $file
+    $regex.replace($filecontent, $NewVersion, 1) | Out-File -Encoding "UTF8" $file
 		Write-Verbose "$file.FullName - version applied"
 	}
 }
