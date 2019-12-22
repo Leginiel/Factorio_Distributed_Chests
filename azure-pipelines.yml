@@ -20,29 +20,26 @@ steps:
     
 - task: CopyFiles@2
   inputs:
-    contents: |
+    Contents: |
       !(*.ps1)
       !(*.yml)
-    targetFolder:
-      Distributed_Chests
-    cleanTargetFolder: true
-    overWrite: true
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/Distributed_Chests'
     preserveTimestamp: true
+    includeRootFolder: true 
+    archiveType: 'zip'    
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip' 
+    replaceExistingArchive: true 
 - task: CopyFiles@2
   inputs:
-    contents: |
-      (changelog.txt)
+    contents: changelog.txt
     targetFolder:
       $(Build.ArtifactStagingDirectory)/changelog.txt
     overWrite: true
     preserveTimestamp: true
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'Distributed-Chests' 
-    includeRootFolder: true 
-    archiveType: 'zip'    
-    archiveFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip' 
-    replaceExistingArchive: true 
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests' 
+
 - task: GitHubRelease@0
   inputs:
     gitHubConnection: github.com
