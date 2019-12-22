@@ -32,6 +32,13 @@ steps:
       !(*.yml)
     TargetFolder: '$(Build.ArtifactStagingDirectory)\Distributed-Chests'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: |
+      changelog.txt
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests'
