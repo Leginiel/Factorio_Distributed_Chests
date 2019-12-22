@@ -12,7 +12,8 @@ pool:
 variables:
   Version.MajorMinor: 0.1
   Version.Patch: $[counter(variables['Version.MajorMinor'], 0)]
-
+  system.debug: true
+  
 name: $(Version.MajorMinor).$(Version.Patch)
 
 steps:
@@ -54,7 +55,7 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'manual'
-    tag: 'Distributed-Chests_$(Env:BUILD_BUILDNUMBER)'
+    tag: 'v$(Version.MajorMinor).$(Version.Patch)'
     title: 'Distributed'
     releaseNotesFile: '$(Build.ArtifactStagingDirectory)/changelog.txt'
     assets: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip'
