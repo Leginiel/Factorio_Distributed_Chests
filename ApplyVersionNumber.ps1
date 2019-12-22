@@ -2,7 +2,7 @@ $VersionRegexWithoutMinor = "\d+\.\d+\."
 
 $files = gci $Env:BUILD_SOURCESDIRECTORY -recurse | 
 		?{ $_.PSIsContainer } | 
-		foreach { gci -Path $_.FullName -Recurse -include *.csproj }
+		foreach { gci -Path $_.FullName -Recurse -include *.json }
 if($files)
 {
 		foreach ($file in $files) {
