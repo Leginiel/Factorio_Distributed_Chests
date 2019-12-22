@@ -27,6 +27,7 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
+      **
       !(*.ps1)
       !(*.yml)
     TargetFolder: '$(Build.ArtifactStagingDirectory)/Distributed_Chests'
@@ -35,14 +36,6 @@ steps:
     archiveType: 'zip'    
     archiveFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip' 
     replaceExistingArchive: true 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    contents: changelog.txt
-    targetFolder:
-      $(Build.ArtifactStagingDirectory)/changelog.txt
-    overWrite: true
-    preserveTimestamp: true
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests' 
