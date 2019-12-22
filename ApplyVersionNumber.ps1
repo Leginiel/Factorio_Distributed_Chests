@@ -12,7 +12,7 @@
 	
 # Regular expression pattern to find the version in the build number 
 # and then apply it to the assemblies
-$VersionRegex = "\d+\.\d+\."
+$VersionRegex = "\d+\.\d+\.\d+"
 	
 # If this script is not running on a build server, remind user to 
 # set environment variables so that this script can be debugged
@@ -64,7 +64,7 @@ switch($VersionData.Count)
          Write-Warning "Will assume first instance is version."
       }
 }
-$NewVersion = $VersionData[0]$Env:BUILD_BUILDNUMBER
+$NewVersion = $VersionData[0]
 Write-Verbose "Version: $NewVersion"
 	
 # Apply the version to the assembly property files
@@ -76,7 +76,9 @@ if($files)
 	foreach ($file in $files) {
 		$filecontent = Get-Content($file)
 		attrib $file -r
-		$filecontent -replace $VersionRegex, $NewVersion | Out-File $file
+    $regex = [Regex]$VersionRegex
+    $regex.replace($filecontent, $NewVersion, 1) | Out-File $file
+#		$filecontent -replace $VersionRegex, $NewVersion, 1 | Out-File $file
 		Write-Verbose "$file.FullName - version applied"
 	}
 }
