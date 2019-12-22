@@ -1,3 +1,5 @@
+[![Build Status](https://leginiel.visualstudio.com/Distributed_Chests/_apis/build/status/Leginiel.Distributed_Chests?branchName=master)](https://leginiel.visualstudio.com/Distributed_Chests/_build/latest?definitionId=17&branchName=master)
+
 # Distributed Chests (Factorio Mod)
 
 Distributed Chest allow your factory and your train loading facilities to evenly distribute the content in their source chests.
