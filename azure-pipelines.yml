@@ -24,6 +24,7 @@ steps:
     
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
       !(*.ps1)
       !(*.yml)
@@ -35,6 +36,7 @@ steps:
     replaceExistingArchive: true 
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
     contents: changelog.txt
     targetFolder:
       $(Build.ArtifactStagingDirectory)/changelog.txt
