@@ -1,16 +1,17 @@
 require "distributedChestGroups"
 
 script.on_load(function()
-	if global.distributedChestGroups ~= nil then
+		for index, group in pairs(global.distributedChestGroups) do
+			setmetatable(group, DistributedChestGroup)
+		end
 		registerEvents()
-	end
 end)
 
 script.on_init(function()
 	if global.distributedChestGroups == nil then
 		global.distributedChestGroups = {}	
 	end
-    registerEvents()
+  registerEvents()
 end)
 
 function registerEvents() 
