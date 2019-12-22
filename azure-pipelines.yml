@@ -28,17 +28,19 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
       **
+      !.git\**
       !(*.ps1)
       !(*.yml)
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/Distributed_Chests'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\Distributed-Chests'
     preserveTimestamp: true
-    includeRootFolder: true 
-    archiveType: 'zip'    
-    archiveFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip' 
-    replaceExistingArchive: true 
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests' 
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Distributed-Chests_$(Env:BUILD_BUILDNUMBER).zip'
+    replaceExistingArchive: true
 
 - task: GitHubRelease@0
   inputs:
