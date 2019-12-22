@@ -12,7 +12,6 @@ pool:
 variables:
   Version.MajorMinor: 0.1
   Version.Patch: $[counter(variables['Version.MajorMinor'], 0)]
-  system.debug: true
 
 name: $(Version.MajorMinor).$(Version.Patch)
 
@@ -32,7 +31,6 @@ steps:
       !(*.ps1)
       !(*.yml)
     TargetFolder: '$(Build.ArtifactStagingDirectory)\Distributed-Chests'
-    preserveTimestamp: true
 
 - task: ArchiveFiles@2
   inputs:
