@@ -14,15 +14,22 @@ data:extend(
 			},
 			unit =
 			{
-				count = 50,	
-				ingredients =
-				{			  
-				   {"automation-science-pack", 1}
+				{
+					count = 50,	
+					ingredients =
+					{			  
+						{"automation-science-pack", 1}
+					},
+					time = 5
 				},
 				{
-				  {"logistic-science-pack", 0.5}
-				},
-				time = 5
+					count = 25,	
+					ingredients =
+					{
+						{"logistic-science-pack", 1}
+					},
+					time = 5
+				}
 			},
 			prerequisites = {"advanced-electronics"},
 			order = "c-a"
