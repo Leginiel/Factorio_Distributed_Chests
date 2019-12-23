@@ -2,7 +2,7 @@ data:extend(
 	{
 		{
 			type = "technology",
-			name = "distributed-chest",
+			name = "distributed-chests",
 			icon_size = 128,
 			icon = "__Distributed-Chests__/graphics/distributed-chest-technology.png",
 			effects =
@@ -14,13 +14,11 @@ data:extend(
 			},
 			unit =
 			{
-				count = 50,	
+				count = 25,	
 				ingredients =
 				{			  
-				   {"automation-science-pack", 1}
-				},
-				{
-				  {"logistic-science-pack", 0.5}
+					{"automation-science-pack", 2},
+					{"logistic-science-pack", 1}
 				},
 				time = 5
 			},

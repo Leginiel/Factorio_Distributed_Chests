@@ -16,7 +16,7 @@ data:extend(
 local recipe = table.deepcopy(data.raw.recipe["steel-chest"])
 recipe.enabled = true
 recipe.name = "distributed-chest"
-recipe.ingredients = {{"advanced-circuit",4},{"fast-inserter",4}, {"distributed-chest", 1}}
+recipe.ingredients = {{"advanced-circuit",4},{"fast-inserter",4}, {"steel-chest", 1}}
 recipe.result = "distributed-chest"
 
 data:extend({recipe})
