@@ -2,7 +2,7 @@ data:extend(
 	{
 		{
 			type = "technology",
-			name = "distributed-chest",
+			name = "distributed-chests",
 			icon_size = 128,
 			icon = "__Distributed-Chests__/graphics/distributed-chest-technology.png",
 			effects =
