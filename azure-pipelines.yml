@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'ubuntu-latest'
+ vmImage: 'ubuntu-latest'
 
 variables:
   Version.MajorMinor: 0.1
