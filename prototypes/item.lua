@@ -4,7 +4,6 @@ data:extend(
 			type = "item",
 			name = "distributed-chest",
 			icon = "__Distributed-Chests__/graphics/distributed-chest.png",
-			icon_size = 32,
 			subgroup = "storage",
 			order = "a[items]-c[distributed-chest]",
 			place_result = "distributed-chest",
