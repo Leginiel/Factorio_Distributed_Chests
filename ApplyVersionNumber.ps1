@@ -75,7 +75,6 @@ if($files)
 	
 	foreach ($file in $files) {
 		$filecontent = Get-Content($file)
-		attrib $file -r
     $regex = [Regex]$VersionRegex
     $regex.replace($filecontent, $NewVersion, 1) | Out-File -Encoding "UTF8" $file
 		Write-Verbose "$file.FullName - version applied"

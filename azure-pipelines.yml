@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
- vmImage: 'windows-latest'
+ vmImage: 'ubuntu-latest'
 
 variables:
   Version.MajorMinor: 0.1
@@ -28,17 +28,17 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
       **
-      !.git\**
+      !.git/**
       !*.ps1
       !*.yml
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\Distributed-Chests'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/Distributed-Chests'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: |
       changelog.txt
-    TargetFolder: '$(Build.ArtifactStagingDirectory)\'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: ArchiveFiles@2
   inputs:
